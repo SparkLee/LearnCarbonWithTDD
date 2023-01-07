@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('s') {
+    stage('build') {
       steps {
         sleep 1
       }
