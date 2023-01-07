@@ -9,5 +9,23 @@ pipeline {
       }
     }
 
+    stage('test') {
+      parallel {
+        stage('test') {
+          steps {
+            echo 'start testing'
+            sh 'echo "testing done."'
+          }
+        }
+
+        stage('anythingelse') {
+          steps {
+            echo 'haha'
+          }
+        }
+
+      }
+    }
+
   }
 }
