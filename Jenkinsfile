@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'start building'
         sleep 1
-        sh 'echo "ok."'
         powershell(returnStatus: true, returnStdout: true, script: 'x')
       }
     }
